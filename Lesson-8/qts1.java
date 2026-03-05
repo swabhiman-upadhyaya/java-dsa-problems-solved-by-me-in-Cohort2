@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 class Solution {
   public static void printNumbers1ToN(int n) {
-    for(int i = n; i <= n; i++) {
+    for (int i = n; i <= n; i++) {
       System.out.print(i + " ");
     }
   }
@@ -12,13 +12,15 @@ class Solution {
 
 public class qts1 {
   public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    
-    int no = sc.nextInt();
+    try (Scanner sc = new Scanner(System.in)) {
 
-    // Here as the method inside the Class solution is static so we'll use the class to call the function.....
-    Solution.printNumbers1ToN(no);
-    
-    sc.close();
+      int no = sc.nextInt();
+
+      // Here as the method inside the Class solution is static so we'll use the class
+      // to call the function.....
+      Solution.printNumbers1ToN(no);
+
+      sc.close();
+    }
   }
 }

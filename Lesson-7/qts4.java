@@ -4,22 +4,23 @@ public class qts4 {
 
   public static void main(String[] args) {
 
-    Scanner sc = new Scanner(System.in);
+    try (Scanner sc = new Scanner(System.in)) {
 
-    char ch = sc.next().toLowerCase().charAt(0);
+      char ch = sc.next().toLowerCase().charAt(0);
 
-    if (ch >= 'a' && ch <= 'z') {
+      if (ch >= 'a' && ch <= 'z') {
 
-      if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
-        System.out.println("Vowel");
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+          System.out.println("Vowel");
+        } else {
+          System.out.println("Consonant");
+        }
+
       } else {
-        System.out.println("Consonant");
+        System.out.println("Invalid input");
       }
 
-    } else {
-      System.out.println("Invalid input");
+      sc.close();
     }
-
-    sc.close();
   }
 }
